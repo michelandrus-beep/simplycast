@@ -1,50 +1,67 @@
 <div align="center">
 
-# Simply Cast
+# Simply Cast (Versión en Español)
 
-**Видеомикшер для Windows. Эфир, запись и стрим — бесплатно, без ключей и подписок.**
+**Mezclador de vídeo para Windows. Emisión en vivo, grabación y streaming — gratis, sin claves ni suscripciones.**
 
-[![Скачать](https://img.shields.io/github/v/release/petrovich-party/simplycast?label=%D1%81%D0%BA%D0%B0%D1%87%D0%B0%D1%82%D1%8C&style=for-the-badge&color=6c4fe0)](https://github.com/petrovich-party/simplycast/releases/latest)
-[![Сайт](https://img.shields.io/badge/%D1%81%D0%B0%D0%B9%D1%82-simply--app.pro-8b7bff?style=for-the-badge)](https://simply-app.pro/)
+[![Descargar](https://img.shields.io/github/v/release/michelandrus-beep/simplycast?label=descargar&style=for-the-badge&color=6c4fe0)](https://github.com/michelandrus-beep/simplycast/releases/latest)
 ![Windows](https://img.shields.io/badge/Windows-10%20%7C%2011-0078d4?style=for-the-badge&logo=windows11&logoColor=white)
-![Android](https://img.shields.io/badge/%D0%BF%D1%83%D0%BB%D1%8C%D1%82-Android-34d399?style=for-the-badge&logo=android&logoColor=white)
-[![Загрузки](https://img.shields.io/github/downloads/petrovich-party/simplycast/total?style=for-the-badge&color=ff4d5e&label=%D0%B7%D0%B0%D0%B3%D1%80%D1%83%D0%B7%D0%BA%D0%B8)](https://github.com/petrovich-party/simplycast/releases)
+![Android](https://img.shields.io/badge/control-Android-34d399?style=for-the-badge&logo=android&logoColor=white)
 
 <img src="site/screenshot.png" alt="Simply Cast" width="900">
 
 </div>
 
-## Что умеет
+---
+
+## 🇪🇸 Traducción al Español (Parcheador de Interfaz y Niveles de Audio)
+
+Dado que SimplyCast no incluye archivos externos de traducción, este repositorio incluye un **script de parcheado automático en Python** (`patch_simplycast.py`) que traduce de forma segura la interfaz de usuario, los controles de emisión/grabación y todo el sistema de **mezclador y niveles de audio** a español sin corromper la integridad del ejecutable.
+
+### Cómo aplicar la traducción en tu PC:
+
+1. **Opción Rápida (1 Clic en Windows):**
+   * Descarga o clona este repositorio.
+   * Haz doble clic en **`parchear_a_espanol.bat`**.
+
+2. **Opción por Línea de Comandos (PowerShell / CMD):**
+   ```bash
+   python patch_simplycast.py "C:\Users\baque\AppData\Local\Programs\SimplyCast\SimplyCast.exe"
+   ```
+
+*Nota:* El script crea automáticamente una copia de respaldo `SimplyCast.exe.original.bak` antes de realizar cualquier cambio. Si en algún momento deseas volver al ruso original, ejecuta:
+```bash
+python patch_simplycast.py --restore
+```
+
+---
+
+## Características de Simply Cast
 
 | | |
 |---|---|
-| 🎬 **Превью и эфир** | врезка и авто-переход, T-bar, 16 переходов, оверлеи, «в чёрное» |
-| 🎥 **Источники** | камеры, экран, видео, картинки, NDI, веб-страницы, титры, PDF и презентации PowerPoint |
-| 🖥 **PowerPoint** | живой показ с анимациями; видео со слайдов играет сам микшер — плавно даже на встроенной видеокарте, звук в микшер |
-| 📡 **Стрим и запись** | файл, RTMP(S), SRT — в несколько направлений, кодирование на NVIDIA/AMD |
-| 🔊 **Аудиомикшер** | шины, solo, AFV, метры, громкость в LUFS |
-| 🛡 **Надёжность** | сбой камеры не валит эфир, стрим переподключается, проект восстанавливается |
-| 📱 **Пульт Android** | живые мониторы, переключение и перестановка входов, камера телефона как источник |
+| 🎬 **Previo y Vivo** | Corte y transición automática, barra T (T-bar), 16 transiciones, overlays, salida a negro |
+| 🎥 **Fuentes de entrada** | Cámaras, pantalla, vídeo, imágenes, NDI, páginas web, títulos, PDF y presentaciones de PowerPoint |
+| 🖥 **PowerPoint** | Presentación en vivo con animaciones; reproducción fluida de vídeos de diapositivas incluso con GPU integrada, envío de audio al mixer |
+| 📡 **Streaming y grabación** | Grabación a archivo, RTMP(S), SRT multidestino con codificación acelerada por hardware (NVIDIA / AMD) |
+| 🔊 **Mezclador de audio** | Buses (A–G, Master), solo, AFV, vúmetros y niveles de volumen en LUFS |
+| 🛡 **Estabilidad** | La caída de una cámara no interrumpe el vivo, reconexión automática de stream y recuperación de proyectos |
+| 📱 **Control remoto Android** | Monitores en tiempo real, cambio y reordenación de entradas, y uso del teléfono como cámara inalámbrica |
 
-## Скачать
+---
 
-Файлы последней версии — в разделе **[Releases](https://github.com/petrovich-party/simplycast/releases/latest)**:
+## Inicio Rápido
 
-| Файл | Для чего |
-|---|---|
-| `SimplyCast-Setup-0.1.0.exe` | установщик для Windows 10/11 x64 (тихая установка: `/VERYSILENT`) |
-| `SimplyCast-Single-0.1.0.exe` | один файл, без установки |
-| `SimplyCast-Remote.apk` | пульт для Android |
+1. Instala e inicia Simply Cast.
+2. Aplica la traducción con `parchear_a_espanol.bat`.
+3. Añade fuentes: cámara, captura de pantalla o archivo de vídeo.
+4. Selecciona la entrada en previo y envíala a emisión (`Espacio`).
+5. Haz clic en **«Transmitir»** o **«Grabar»**.
 
-## Быстрый старт
+---
 
-1. Установите и запустите Simply Cast.
-2. Добавьте входы: камера, экран или видеофайл.
-3. Выберите вход в превью и переведите в эфир (`Space`).
-4. Нажмите **«Выйти в эфир»** или **«Записать»**.
+## Licencias
 
-## Лицензии и сведения
+Simply Cast utiliza Qt y FFmpeg bajo licencia LGPL; los textos de las licencias se encuentran en la carpeta `licenses` del programa. NDI® es una marca registrada de Vizrt NDI AB.
 
-Simply Cast использует Qt и FFmpeg по LGPL; тексты лицензий — в папке `licenses` программы. NDI® — зарегистрированный товарный знак Vizrt NDI AB. [Политика конфиденциальности](https://simply-app.pro/privacy.html).
-
-© [Petrovich.party](https://petrovich.party/)
+Fork mantenido y traducido para la comunidad hispanohablante.
